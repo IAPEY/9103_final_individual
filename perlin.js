@@ -37,9 +37,17 @@ function drawWind(){
 
   // 限制数组的长度，以保持拖尾效果
   if (particles.length > 100) {
-    particles.splice(0, 30);
+    particles.splice(0, 70);
   }
 
+  for(let y=0;y<particles.length;y++){
+    let yoff=0;
+    for(let x=0;x<particles.length;x++){
+      let xoff=0
+     // particles[x].add(noise(x,y),random(-5,5));
+      particles[x].add(random(-5,5),random(-5,5));
+    }
+  }
   // 绘制粒子轨迹
   for (let i = 0; i < particles.length; i++) {
     let alpha = map(i, 0, particles.length, 255, 0); // 透明度随时间减小
