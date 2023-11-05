@@ -1,11 +1,16 @@
 
 function draw() {
+  push();
+  colorMode(HSL)
   
+  background(20,15,30);
   drawBackground();
+  pop();
   // black stroke
   drawWind();
+  push();
   getMouseSpeed();
-
+  pop();
   scale(scaleNum);
   translate(1/3*windowWidth,1/4*windowHeight);
   noFill();
@@ -47,6 +52,45 @@ function draw() {
   
   for (let i = 0; i < circles.length; i++) {
     circles[i].show();
+    push();
+    scale(0.4);
+    translate(600,660);
+    stroke(0,60);
+    ellipse(record[i].x, record[i].y, record[i].diam + 2);
+    record[i].show();
+    pop();
+
+    push();
+    scale(0.6);
+    translate(-300,320);
+    stroke(0,60);
+    ellipse(record[i].x, record[i].y, record[i].diam + 2);
+    record[i].show();
+    pop();
+
+    push();
+    scale(1.2);
+    translate(-500,0);
+    stroke(0,80);
+    ellipse(record[i].x, record[i].y, record[i].diam + 2);
+    record[i].show();
+    pop();
+
+    push();
+    scale(1.7);
+    translate(300,-60);
+    stroke(0,90);
+    ellipse(record[i].x, record[i].y, record[i].diam + 2);
+    record[i].show();
+    pop();
+
+    push();
+    scale(1.0);
+    translate(400,0);
+    stroke(0,60);
+    ellipse(record[i].x, record[i].y, record[i].diam + 2);
+    record[i].show();
+    pop();
   }
   
   pop();

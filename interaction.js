@@ -118,8 +118,8 @@ function mouseClicked() {
   
   // 显示速度
   textSize(20);
-  text("X速度: " + mouseXSpeed, 10, 30);
-  text("Y速度: " + mouseYSpeed, 10, 60);
+  text("Xspeed: " + mouseXSpeed, 10, 30);
+  text("Yspeed: " + mouseYSpeed, 10, 60);
   text(mouseXSpeed/10*circles[1].diam/10, 10, 90);
  
   // 在鼠标位置绘制一个点
