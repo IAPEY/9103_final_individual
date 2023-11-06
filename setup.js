@@ -7,11 +7,6 @@ function setup() {
   prevMouseY = mouseY;//mouse speed setup
   strokeWeight(3);
 
- 
-
-
-
-  
   circles.push(new HalfCircle(166, 482, 40, 0, PI, false));
   circles.push(new HalfCircle(200, 482, 24, 0, PI, true));
   circles.push(new HalfCircle(222, 468, 40, 1.1, PI + 2.1, true));
@@ -50,7 +45,7 @@ function setup() {
   circles.push(new HalfCircle(322, 206, 35, 1.3, PI + 1.9, false));
   circles.push(new HalfCircle(317, 236, 36, 1.1, PI + 2.1, false));
 
- record.push(new HalfCircle(166, 482, 40, 0, PI, false));
+  record.push(new HalfCircle(166, 482, 40, 0, PI, false));
   record.push(new HalfCircle(200, 482, 24, 0, PI, true));
   record.push(new HalfCircle(222, 468, 40, 1.1, PI + 2.1, true));
   record.push(new HalfCircle(252, 482, 30, 0, PI, false));
@@ -86,13 +81,13 @@ function setup() {
   record.push(new HalfCircle(326, 135, 25, 1.3, PI + 1.9, false));
   record.push(new HalfCircle(329, 170, 50, 1.6, PI + 1.6, true));
   record.push(new HalfCircle(322, 206, 35, 1.3, PI + 1.9, false));
-  record.push(new HalfCircle(317, 236, 36, 1.1, PI + 2.1, false));
+  record.push(new HalfCircle(317, 236, 36, 1.1, PI + 2.1, false));//record apples status
 
   for (i = 0; i < circles.length; i++) {
-  
-    speed[i]=0;
-    acc[i]=0;
-    isdrop[i]=0;
-    console.log(speed[i]);
-  }//xspeed default
+
+    speed[i] = 0;
+    acc[i] = 0;
+    isdrop[i] = 0;//set default parameters 
+    //console.log(speed[i]);//debug
+  }
 }
